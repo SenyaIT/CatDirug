@@ -22,9 +22,11 @@ export class Cat {
     render (){
         // Div that wraps cat element
         const CatDiv  = document.createElement("div");
+        CatDiv.className = "cat-elem";
 
         // Cat image
         const catImg = document.createElement("img");
+        
         catImg.src = this.picture;
 
         // adding cat image into div
