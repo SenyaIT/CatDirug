@@ -1,9 +1,13 @@
 import { Cat } from "./Elements/cat.js";
 import { Tier } from "./Elements/tier.js";
+import { Digur } from "./Elements/digur.js"; 
 
 const Doc = document.getElementById("app")
 
-//const Cat1 = new Cat("Simon", 9, "Russia", './catPhotos/Simon.jpg')
- const Tier1 = new Tier("S", "red", 1, 4 ) 
+// const Cat1 = new Cat("Simon", 9, "Russia", './catPhotos/Simon.jpg')
+// const Tier1 = new Tier("S", "red", 1, 4 ) 
+// Tier1.cats.push(Cat1)
 
-Doc.appendChild(Tier1.render());   
+const digur1 = new Digur("CAT DIGUR", 5, 4)   
+
+Doc.appendChild(digur1.render());    

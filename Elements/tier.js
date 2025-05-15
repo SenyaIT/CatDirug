@@ -21,7 +21,8 @@ export class Tier{
         // createing a tier 
         const DivTier = document.createElement("div") ;
         DivTier.className = "tier"; 
-
+        DivTier.style.backgroundColor = this.color; 
+        
         //rendering slots with cats or empty
         for (let i = 0; i< this.number; i++) { 
 
@@ -35,7 +36,7 @@ export class Tier{
                 Slot.appendChild(this.cats[i].render())
 
                 // adding slot to the Tier
-                DivTier.appendChild(EmptySlot) 
+                DivTier.appendChild(Slot)  
             }
 
             // rendering empty slots
@@ -44,6 +45,7 @@ export class Tier{
 
                 const EmptySlot = document.createElement("div");
                 EmptySlot.className = "slot"
+
 
                 // adding slot to the Tier
                 DivTier.appendChild(EmptySlot) 

@@ -22,15 +22,22 @@
     text-align: center;       /* center the text inside */
 
     background-color: aquamarine; 
-    margin: 5px;
+    margin: 15px; 
 }
 
 .tier {
 
+    width: 70%; 
+    padding-left: 50px; 
+    margin: 20px ;
     display: flex;  
     align-items: center;      /* center vertically */
     text-align: center;       /* center the text inside */
     height: 200px;   
 
-    background-color:burlywood;  
+    /* background-color:burlywood;   */ 
+}
+.app{
+    text-align: center; 
+    background-color: azure; 
 }
