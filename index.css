@@ -56,3 +56,21 @@
     align-items: center;      /* center vertically */
     text-align: center;       /* center the text inside */ 
 }
+
+.card{
+    width: 140px;
+    height: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items:center;        /* center vertically */
+    text-align: center;       /* center the text inside */ 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.card img {
+    width: 130px;
+    height: 150px;  
+}
