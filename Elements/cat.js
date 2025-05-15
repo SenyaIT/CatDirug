@@ -1,5 +1,5 @@
 
-import { Person } from "../person.js";
+import { Person } from "./person.js";
 
 export class Cat {
     constructor(name, age, country, picture) {

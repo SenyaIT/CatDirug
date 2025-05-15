@@ -3,7 +3,6 @@ export class Person {
         this.name = name;
         this.age = age;
         this.country = country;
-        this.picture = picture;
-        this.owners = [];
+        this.picture = picture; 
       }
 }
