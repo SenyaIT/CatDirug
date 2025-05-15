@@ -22,7 +22,14 @@ export class Tier{
         const DivTier = document.createElement("div") ;
         DivTier.className = "tier"; 
         DivTier.style.backgroundColor = this.color; 
-        
+
+
+        //adding a name of the tier : s a ... f
+        const TierName = document.createElement("div")
+        TierName.className = "tier-name"
+        TierName.textContent = this.name;
+        DivTier.appendChild(TierName) 
+
         //rendering slots with cats or empty
         for (let i = 0; i< this.number; i++) { 
 
