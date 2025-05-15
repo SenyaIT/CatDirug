@@ -36,7 +36,7 @@ export class Tier{
             //redering cats if there are some
             if (i < this.cats.length){ 
 
-                console.log("Creating a cat slot in tier.js") 
+
 
                 const Slot = document.createElement("div");
                 Slot.className = "slot"
@@ -46,9 +46,9 @@ export class Tier{
                 DivTier.appendChild(Slot)  
             }
 
-            // rendering empty slots
+            // rendering empty slots 
             else {
-                console.log("Creating an empty slot in tier.js")  
+
 
                 const EmptySlot = document.createElement("div");
                 EmptySlot.className = "slot"

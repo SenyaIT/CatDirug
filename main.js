@@ -1,17 +1,27 @@
 import { Cat } from "./Elements/cat.js";
 import { Tier } from "./Elements/tier.js";
 import { Digur } from "./Elements/digur.js"; 
-import { Card } from "./Elements/Card.js";
+import { Card } from "./Elements/card.js";
+import { Content } from "./Elements/content.js";
 
 const Doc = document.getElementById("app")
 
+const digur1 = new Digur("CAT DIGUR", 3, 4)   
+
+Doc.appendChild(digur1.render());
+
+
+
+
 const Cat1 = new Cat("Simon", 9, "Russia", '/catPhotos/Simon.jpg')
-// const Tier1 = new Tier("S", "red", 1, 4 ) 
-// Tier1.cats.push(Cat1)
+const Cat2 = new Cat("Messi", 3, "Israel", '/catPhotos/Messi.jpg') 
 
-const digur1 = new Digur("CAT DIGUR", 5, 4)  
 
-const card = new Card(Cat1)
-Doc.appendChild(digur1.render()); 
+const card1 = new Card(Cat1)
+const card2 = new Card(Cat2) 
 
-Doc.appendChild(card.render())   
+const content = new Content(2)
+content.addCard(card1)
+content.addCard(card2)
+ 
+Doc.appendChild(content.render())    
