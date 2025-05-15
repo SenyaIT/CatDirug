@@ -1,4 +1,4 @@
-import { Cat } from "./cat.js";
+import { Cat } from "./Elements/cat.js";
 
 const Doc = document.getElementById("app")
 
