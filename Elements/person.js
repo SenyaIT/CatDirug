@@ -4,5 +4,6 @@ export class Person {
         this.age = age;
         this.country = country;
         this.picture = picture; 
+        this.dirug = [];
       }
 }
