@@ -1,4 +1,9 @@
-import { Cat } from "./cat.js";
+import { loadCSS } from "../../Utils/loadCSS.js";
+
+loadCSS('./Elements/Tier/tier.css')      
+
+import { Cat } from "../Cat/cat.js";
+import { Slot } from "../Slot/slot.js";
 
 const doc = document.getElementById("app");
 
@@ -30,33 +35,21 @@ export class Tier{
         TierName.textContent = this.name;
         DivTier.appendChild(TierName) 
 
+
         //rendering slots with cats or empty
         for (let i = 0; i< this.number; i++) { 
 
-            //redering cats if there are some
+            //creating an  empty slot
+            const slot = new Slot(null)
+
+            //adding cats if there are some
             if (i < this.cats.length){ 
-
-
-
-                const Slot = document.createElement("div");
-                Slot.className = "slot"
-                Slot.appendChild(this.cats[i].render())
-
-                // adding slot to the Tier
-                DivTier.appendChild(Slot)  
+                slot.setActor(this.cats[i]) 
             }
 
-            // rendering empty slots 
-            else {
-
-
-                const EmptySlot = document.createElement("div");
-                EmptySlot.className = "slot"
-
-
-                // adding slot to the Tier
-                DivTier.appendChild(EmptySlot) 
-            }
+            // adding slot to the Tier
+            DivTier.appendChild(slot.render()) 
+            
         }
 
         return(DivTier) 

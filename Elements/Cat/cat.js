@@ -1,5 +1,9 @@
 
-import { Person } from './person.js'; 
+import { loadCSS } from "../../Utils/loadCSS.js";
+
+loadCSS('./Elements/Cat/cat.css')    
+
+import { Person } from "../Person/person.js";
 
 export class Cat {
     constructor(name, age, country, picture) {

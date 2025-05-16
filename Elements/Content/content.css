@@ -1,0 +1,17 @@
+.content-body{ 
+    padding-top: 30px;
+    
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+}
+
+.content-body h2 {
+    
+}
+
+.content { 
+    margin: 50px; 
+    display: flex;
+    align-items:center;        /* center vertically */
+    text-align: center;    
+}

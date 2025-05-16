@@ -1,5 +1,7 @@
-import { Cat } from "./cat.js";
-import { Card } from "./card.js"
+import { loadCSS } from "../../Utils/loadCSS.js";
+
+loadCSS('./Elements/Content/content.css')       
+
 
 export class Content {
     constructor(number) {

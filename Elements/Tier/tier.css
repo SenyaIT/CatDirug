@@ -1,0 +1,29 @@
+.tier-name{
+
+    margin-right: 25px;   
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: brown; 
+
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    text-align: center;       /* center the text inside */ 
+}
+
+.tier {
+
+    width: 70%; 
+    padding-left: 50px; 
+    margin: 20px ;
+    display: flex;  
+    align-items: center;      /* center vertically */
+    text-align: center;       /* center the text inside */
+    height: 150px;     
+
+
+
+    /* background-color:burlywood;   */ 
+}

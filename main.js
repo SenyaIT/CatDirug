@@ -1,8 +1,7 @@
-import { Cat } from "./Elements/cat.js";
-import { Tier } from "./Elements/tier.js";
-import { Digur } from "./Elements/digur.js"; 
-import { Card } from "./Elements/card.js";
-import { Content } from "./Elements/content.js";
+import { Cat } from "./Elements/Cat/cat.js";
+import { Digur } from "./Elements/Digur/digur.js";
+import { Card } from "./Elements/Card/card.js";
+import { Content } from "./Elements/Content/content.js";
 
 const Doc = document.getElementById("app")
 

@@ -1,0 +1,15 @@
+.slot{
+    height: 90%;   
+    width: 200px;  
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    text-align: center;       /* center the text inside */
+
+    background-color: aquamarine; 
+    margin: 15px; 
+
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}

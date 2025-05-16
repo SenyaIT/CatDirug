@@ -1,0 +1,14 @@
+.cat-elem { 
+    max-width: 200px; 
+    display: flex;
+    justify-content: center;  /* center horizontally */
+    align-items: center;      /* center vertically */
+    text-align: center;       /* center the text inside */
+
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}  
+.cat-elem img{
+    width: 200px; 
+    height: 150px; 
+}
