@@ -1,4 +1,4 @@
-.card{
+.card-img-div{ 
     width: 140px;
     height: 160px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -10,6 +10,25 @@
     background-position: center;
     background-repeat: no-repeat; 
     margin: 30px ; 
+}
+
+.card{
+    background-color: aqua;
+    margin: 10px; 
+}
+.card p { 
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.in-slot p {
+    display: none; 
+}
+
+.in-slot{
+    
 }
 
 .card img {

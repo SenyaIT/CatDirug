@@ -1,3 +1,4 @@
+import { DragCard } from "../../Globals/dragCard.js";
 import { loadCSS } from "../../Utils/loadCSS.js";
 
 loadCSS('./Elements/Card/card.css')      
@@ -6,6 +7,7 @@ export class Card {
     constructor(actor){ 
         this.actor = actor;
         this.elem = document.createElement("div");
+        this.elem.className = "card" 
 
         this.isDragging = false
          
@@ -18,14 +20,19 @@ export class Card {
     } 
 
     render (){
-        const cardDiv = this.elem 
-        cardDiv.className = "card" 
+        const cardDiv = document.createElement("div")
 
+        cardDiv.className = "card-img-div" 
         cardDiv.style.backgroundImage =  `url('${this.actor.picture}`; 
-    
-        cardDiv.textContent = this.actor.name;
+        this.elem.appendChild(cardDiv) 
+
+        const text = document.createElement("p")
+        text.textContent = this.actor.name;
         
-        return cardDiv 
+
+        this.elem.appendChild(text)  
+        
+        return this.elem
     }
 
 
@@ -34,7 +41,11 @@ export class Card {
     onDrag = (e)=> {
         if (e.button !== 0) return; 
         this.isDragging = true
-        this.elem.classList.add("drag")  
+        this.elem.style.left = `${e.clientX - this.offsetX}px`;
+        this.elem.style.top = `${e.clientY - this.offsetY}px`;  
+        this.elem.classList.add("drag") 
+        
+        DragCard.setCard(this) 
 
     }
      onMove= (e)=> {
@@ -49,5 +60,17 @@ export class Card {
         this.isDragging = false
         this.elem.classList.remove("drag") 
      } 
+
+    makeHitInvisible() {
+        this.elem.style.pointerEvents = "none"
+    }
+    makeHitVisible() {
+        this.elem.style.pointerEvents = "auto"
+    }
+
+    removeElement() {
+        this.elem.remove();
+    }
+
 
 }

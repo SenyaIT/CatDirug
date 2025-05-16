@@ -1,8 +1,6 @@
 import { loadCSS } from "../../Utils/loadCSS.js";
-
 loadCSS('./Elements/Tier/tier.css')      
 
-import { Cat } from "../Cat/cat.js";
 import { Slot } from "../Slot/slot.js";
 
 const doc = document.getElementById("app");
@@ -13,12 +11,12 @@ export class Tier{
         this.color = color;
         this.rank = rank;
         this.number = number;
-        this.cats = [];
+        this.slots = [];
     }
 
-    addCat (cat){
-        if (!cat instanceof Cat) return;
-        this.cats.push(cat);
+    addSlot (slot){
+        if (!slot instanceof Slot) return;
+        this.slots.push(slot);
     }
 
     render () {
@@ -40,12 +38,8 @@ export class Tier{
         for (let i = 0; i< this.number; i++) { 
 
             //creating an  empty slot
-            const slot = new Slot(null)
-
-            //adding cats if there are some
-            if (i < this.cats.length){ 
-                slot.setActor(this.cats[i]) 
-            }
+            const slot = new Slot(null,this.rank, i+1) 
+            this.addSlot(slot)  
 
             // adding slot to the Tier
             DivTier.appendChild(slot.render()) 

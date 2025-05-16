@@ -4,21 +4,20 @@ loadCSS('./Elements/Content/content.css')
 
 
 export class Content {
-    constructor(number) {
-        this.number = number
-        this.cards = []
+
+    static cards = [] 
+
+    static addCard(card) {
+        Content.cards.push(card)
     }
-    addCard(card) {
-        this.cards.push(card)
-    }
-    removeCard(card) {
+    static removeCard(card) {
         const cardPos = this.cards.indexOf(card)
         if (cardPos !== -1) {
             this.cards.splice(cardPos, 1)
         }
     }
 
-    render() {
+    static render() {
 
         const contentBody = document.createElement("div")
         contentBody.className = "content-body" 
@@ -36,11 +35,12 @@ export class Content {
         contentBody.appendChild(title2)  
 
 
-        this.cards.forEach(card => {
+        Content.cards.forEach(card => {
             content.appendChild(card.render())
         });
 
         contentBody.appendChild(content)
         return contentBody;
     }
+
 }
