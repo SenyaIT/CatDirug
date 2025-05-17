@@ -1,22 +1,38 @@
 import { Cat } from "./Elements/Cat/cat.js";
 import { Digur } from "./Elements/Digur/digur.js";
-import { Card } from "./Elements/Card/card.js";
+import {Card} from "./Elements/Card/card.js";
 import { Content } from "./Elements/Content/content.js";
-
-const Doc = document.getElementById("app")
-const digur1 = new Digur("CAT DIGUR", 3, 4)   
-
-Doc.appendChild(digur1.render());
+import { CardsPool } from "./Elements/Content/cardsPool.js";
 
 
-const Cat1 = new Cat("Simon", 9, "Russia", '/catPhotos/Simon.jpg')
-const Cat2 = new Cat("Messi", 3, "Israel", '/catPhotos/Messi.jpg') 
+init(); 
 
+async function populateContentwithCards() {
+    try {
+      const res = await fetch('./Elements/Cat/cat.json');
+      const elems = await res.json();
+  
+      elems.forEach(elem => {
+        const cat = new Cat(elem.name, elem.age, elem.country, elem.picture);
+        const card = new Card(cat);
+        Content.addCard(card);
+      });
 
-const card1 = new Card(Cat1)
-const card2 = new Card(Cat2) 
+    } catch (err) {
+      console.error("Failed to load cat data:", err);
+    }
+  }
 
-Content.addCard(card1)
-Content.addCard(card2)
- 
-Doc.appendChild(Content.render())     
+async function init() {
+    const Doc = document.getElementById("app")
+    const digur1 = new Digur("CAT DIGUR", 3, 4)   
+
+    Doc.appendChild(digur1.render());
+
+    await populateContentwithCards(); // wait for cards to be ready
+    
+    const pool = new CardsPool(Content.cards);
+    
+    Doc.appendChild(pool.render());
+}
+

@@ -39,8 +39,6 @@ export class Digur {
             this.digurDiv.appendChild(tier.render());
 
         }
-
-
         return this.digurDiv;
     }
 
@@ -76,6 +74,7 @@ export class Digur {
                 hoveredElement.appendChild(dragCard.elem) //  putting the dragging card inside of the slot in the DOM 
 
                 dragCard.elem.classList.add("in-slot");  
+                slot.render() 
             }
 
             DragCard.clearCard()

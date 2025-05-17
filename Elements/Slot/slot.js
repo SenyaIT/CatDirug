@@ -33,15 +33,17 @@ export class Slot {
     render () {
 
         // if the slot is empty
-        if (!this.actor) return this.elem 
+        if (!this.actor)  this.elem.style.backgroundImage =  ``; 
 
-
+        else {
         // if the slot has something passed in
-        this.elem.style.backgroundImage =  `url('${this.actor.picture}`; 
-        this.elem.textContent = this.actor.name;
+        this.elem.style.backgroundImage =  `url('${this.actor.picture}`;
+        } 
+     
         
         return this.elem 
     }
+
 
 
     onHover = (e) => {
