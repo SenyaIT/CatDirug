@@ -2,6 +2,8 @@
     padding: 30px; 
     background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
     background-size: 400% 400%;
+    width: 100%;
+    
 }
 
 .content-body h2 {
@@ -9,10 +11,18 @@
 }
 
 .content {  
-    
+    width: 80%;  
+    min-height: 300px; 
+    background-color: chocolate; 
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items:center;        /* center vertically */
     text-align: center;    
+}
+
+.hovered{ 
+    border: 2px solid #00bfff;          /* bright blue border */
+    background-color: rgba(0, 191, 255, 0.1); /* light blue glow */
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.4); /* optional soft glow */
 }

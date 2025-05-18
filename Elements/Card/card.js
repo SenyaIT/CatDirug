@@ -7,7 +7,10 @@ export class Card {
     constructor(actor){ 
         this.actor = actor;
         this.elem = document.createElement("div");
-        this.elem.className = "card" 
+        this.elem.className = "card"  
+        this.elem.id = actor.name
+ 
+        this.slot = null 
 
         this.isDragging = false
          
@@ -40,6 +43,15 @@ export class Card {
 
     onDrag = (e)=> {
         if (e.button !== 0) return; 
+
+        this.makeHitInvisible()
+
+        // checking if card is in slot
+        if (this.slot) {
+            this.elem.classList.remove("in-slot")  
+            this.slot.actor = null 
+        }
+
         this.isDragging = true
         this.elem.style.left = `${e.clientX - this.offsetX}px`;
         this.elem.style.top = `${e.clientY - this.offsetY}px`;  
@@ -68,9 +80,13 @@ export class Card {
         this.elem.style.pointerEvents = "auto"
     }
 
-    removeElement() {
-        this.elem.remove();
+    setSlot(slot) { 
+        this.slot = slot;
     }
+    clearSlot() {
+        this.slot = null
+    }
+
 
 
 }

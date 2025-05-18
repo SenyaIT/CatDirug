@@ -50,8 +50,9 @@ export class Digur {
         // if no dragging card nothing happens
         if (!dragCard) return
 
-        // make dragging card invisible to get the slot position
-        dragCard.makeHitInvisible();
+        if (Content.hovered) {
+            
+        }
 
         // getting the element on which the card is being dropped
         const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
@@ -73,9 +74,12 @@ export class Digur {
 
                 hoveredElement.appendChild(dragCard.elem) //  putting the dragging card inside of the slot in the DOM 
 
-                dragCard.elem.classList.add("in-slot");  
+                dragCard.elem.classList.add("in-slot");
+                dragCard.setSlot(slot);   
+
                 slot.render() 
             }
+            
 
             DragCard.clearCard()
         }

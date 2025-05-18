@@ -21,6 +21,7 @@ export class Slot {
         // drag and drop events :
         this.elem.addEventListener("mouseenter", this.onHover) 
         this.elem.addEventListener("mouseleave", this.onHoverOut) 
+        this.elem.addEventListener("mousedown", this.onTake) 
     }
 
     setActor(actor){
@@ -31,16 +32,6 @@ export class Slot {
         return false;
     }
     render () {
-
-        // if the slot is empty
-        if (!this.actor)  this.elem.style.backgroundImage =  ``; 
-
-        else {
-        // if the slot has something passed in
-        this.elem.style.backgroundImage =  `url('${this.actor.picture}`;
-        } 
-     
-        
         return this.elem 
     }
 
@@ -48,9 +39,13 @@ export class Slot {
 
     onHover = (e) => {
         this.isHovered = true 
+        this.elem
     }
 
     onHoverOut = (e) => {
         this.isHovered = false;
     } 
+
+    onTake = (e) => {
+    }
 }

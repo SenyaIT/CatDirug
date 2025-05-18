@@ -7,6 +7,7 @@ loadCSS('./Elements/Content/content.css')
 export class Content {
 
     static cards = [] 
+    static hovered = false;
 
     static populateCards (incomingCards) {
         incomingCards.forEach(card => {
