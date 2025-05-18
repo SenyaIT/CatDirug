@@ -17,9 +17,17 @@ export class Digur {
         this.digurDiv = document.createElement("div");
 
         document.addEventListener("mouseup", this.onDrop)
+        document.addEventListener("keydown", this.testDirug)
     }
 
 
+    testDirug = (e) => {
+        this.tiers.forEach(tier => {
+            tier.slots.forEach(slot=>{
+                console.log(slot.actor)
+            })
+        })
+    }
     AddTier(tier) {
         if (!tier instanceof Tier) return;
         this.tiers.push(tier);
@@ -51,7 +59,7 @@ export class Digur {
         if (!dragCard) return
 
         if (Content.hovered) {
-            
+            return 
         }
 
         // getting the element on which the card is being dropped

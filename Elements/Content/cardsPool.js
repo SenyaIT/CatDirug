@@ -12,6 +12,8 @@ export class CardsPool {
 
         this.content.addEventListener("mouseenter", this.onHover)
         this.content.addEventListener("mouseleave", this.onUnHover)
+
+        document.addEventListener("mouseup", this.onDrop)
     }
 
     render() {
@@ -43,7 +45,20 @@ export class CardsPool {
 
     onUnHover = (e) => {
        if (!DragCard.currentCard) return
-        Content.hovered = false;
+        Content.hovered = false; 
         this.content.classList.remove("hovered")
+    }
+
+    onDrop = (e) => {
+
+        if(!Content.hovered) return
+        if(!DragCard.currentCard) return 
+        this.content.classList.remove("hovered")
+        this.content.appendChild(DragCard.currentCard.elem)  
+        DragCard.currentCard.slot.actor = null
+        DragCard.currentCard.makeHitVisible() 
+        DragCard.clearCard() 
+        console.log()
+ 
     }
 }
