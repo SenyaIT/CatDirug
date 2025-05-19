@@ -3,7 +3,7 @@ import { Start } from "../../Globals/start.js";
 import { loadCSS } from "../../Utils/loadCSS.js";
 import { Content } from "../Content/content.js";
 
-loadCSS('./Elements/Digur/digur.css')
+loadCSS('../Elements/Digur/digur.css')
 
 import { Tier } from "../Tier/tier.js";
 const TIERNAMES = ["S", "A", "B", "C", "D", "E", "F"]

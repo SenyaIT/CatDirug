@@ -1,5 +1,8 @@
 import { DragCard } from "../../Globals/dragCard.js";
-import { Content } from "./content.js";
+import { Content } from "./content.js"; 
+import { loadCSS } from "../../Utils/loadCSS.js";
+
+loadCSS('../Elements/Content/content.css')       
 
 export class CardsPool {
 

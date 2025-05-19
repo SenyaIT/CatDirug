@@ -1,6 +1,6 @@
 import { loadCSS } from "../../Utils/loadCSS.js";
 
-loadCSS('./Elements/Person/person.css')      
+loadCSS('../Elements/Person/person.css')      
 
 export class Person {
     constructor(name, age, country, picture) {

@@ -1,5 +1,5 @@
 import { loadCSS } from "../../Utils/loadCSS.js";
-loadCSS('./Elements/Tier/tier.css')      
+loadCSS('../Elements/Tier/tier.css')      
 
 import { Slot } from "../Slot/slot.js";
 

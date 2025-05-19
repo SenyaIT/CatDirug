@@ -3,7 +3,7 @@
         "name": "Simon",
         "age": 10,
         "country": "Russia",
-        "picture": "./catPhotos/Simon.jpg",
+        "picture": "../catPhotos/Simon.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0
@@ -12,7 +12,7 @@
         "name": "Messi",
         "age": 3,
         "country": "Israel",
-        "picture": "./catPhotos/Messi.jpg",
+        "picture": "../catPhotos/Messi.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0
@@ -21,7 +21,7 @@
         "name": "Sis",
         "age": 5,
         "country": "Russia",
-        "picture": "./catPhotos/Sis.jpg",
+        "picture": "../catPhotos/Sis.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0
@@ -30,7 +30,7 @@
         "name": "Musik",
         "age": 6,
         "country": "Israel",
-        "picture": "./catPhotos/Messi.jpg",
+        "picture": "../catPhotos/Messi.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0
@@ -39,7 +39,7 @@
         "name": "Belyasha",
         "age": 7,
         "country": "Russia",
-        "picture": "./catPhotos/Belyasha.jpg",
+        "picture": "../catPhotos/Belyasha.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0
@@ -48,7 +48,7 @@
         "name": "Leya",
         "age": 3,
         "country": "Israel",
-        "picture": "./catPhotos/Leya.jpg",
+        "picture": "../catPhotos/Leya.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0
@@ -57,7 +57,7 @@
         "name": "Suni",
         "age": 1,
         "country": "Russia",
-        "picture": "./catPhotos/Suni.jpg",
+        "picture": "../catPhotos/Suni.jpg",
         "owners":[],
         "tiStat": 0,
         "tiRank": 0

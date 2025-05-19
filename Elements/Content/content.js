@@ -1,6 +1,3 @@
-import { loadCSS } from "../../Utils/loadCSS.js";
-
-loadCSS('./Elements/Content/content.css')       
 
 // static class for storing cards 
 

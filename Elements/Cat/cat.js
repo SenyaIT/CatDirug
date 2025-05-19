@@ -1,7 +1,7 @@
 
 import { loadCSS } from "../../Utils/loadCSS.js";
 
-loadCSS('./Elements/Cat/cat.css')    
+loadCSS('../Elements/Cat/cat.css')    
 
 import { Person } from "../Person/person.js";
 

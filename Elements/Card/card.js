@@ -1,7 +1,7 @@
 import { DragCard } from "../../Globals/dragCard.js";
 import { loadCSS } from "../../Utils/loadCSS.js";
 
-loadCSS('./Elements/Card/card.css')      
+loadCSS('../Elements/Card/card.css')       
 
 export class Card {
     constructor(actor){ 
