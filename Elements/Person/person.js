@@ -8,6 +8,14 @@ export class Person {
         this.age = age;
         this.country = country;
         this.picture = picture; 
-        this.dirug = [];
+        this.password = "";
       }
+
+  setPassword(password){
+    this.password = password;
+  }
+
+  checkPassword (password) {
+    return this.password === password 
+  }
 }

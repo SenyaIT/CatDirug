@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Arseniy",
+        "age": 25,
+        "country": "Russia",
+        "picture": "../catPhotos/Simon.jpg"
+    },
+    {
+        "name": "Alina",
+        "age": 21,
+        "country": "Russia",
+        "picture": "../catPhotos/Messi.jpg"
+    },
+    {
+        "name": "Lev",
+        "age": 29,
+        "country": "Israel",
+        "picture": "../catPhotos/Sis.jpg"
+    },    
+    {
+        "name": "Anzhelika",
+        "age": 25,
+        "country": "Israel",
+        "picture": "../catPhotos/Messi.jpg"
+    },
+    {
+        "name": "Lada",
+        "age": 53,
+        "country": "Russia",
+        "picture": "../catPhotos/Belyasha.jpg"
+    },
+    {
+        "name": "Yuriy",
+        "age": 53,
+        "country": "Russia",
+        "picture": "../catPhotos/Leya.jpg"
+    }
+]
