@@ -3,6 +3,7 @@ import { Digur } from "../Elements/Digur/digur.js";
 import {Card} from "../Elements/Card/card.js";
 import { Content } from "../Elements/Content/content.js";
 import { CardsPool } from "../Elements/Content/cardsPool.js";
+import { People } from "./Globals/people.js";
 
 
 init(); 
@@ -24,15 +25,19 @@ async function populateContentwithCards() {
   }
 
 async function init() {
+
+    // Creating Tier List
     const Doc = document.getElementById("app")
     const digur1 = new Digur("CAT DIGUR", 3, 4)   
 
     Doc.appendChild(digur1.render());
 
+    // Creating Card Pool
     await populateContentwithCards(); // wait for cards to be ready
-    
     const pool = new CardsPool(Content.cards);
 
     Doc.appendChild(pool.render());
+
 }
+
 
